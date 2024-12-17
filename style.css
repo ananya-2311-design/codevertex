@@ -5,87 +5,80 @@
     box-sizing: border-box;
   }
   
+  
   body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
-    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
   }
   
-  h1, h2, h3 {
-    color: #333;
-  }
   
-
-  .tribute-container {
-    max-width: 960px;
-    margin: 0 auto;
+  .calculator {
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    width: 320px;
     padding: 20px;
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   }
   
-  header {
-    text-align: center;
+  
+  .result {
+    width: 100%;
+    height: 50px;
+    font-size: 24px;
+    text-align: right;
+    padding: 10px;
     margin-bottom: 20px;
-  }
-  
-  h1 {
-    font-size: 2.5em;
-    margin-bottom: 10px;
-  }
-  
-  .tribute-image {
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
-  .tribute-image img {
-    width: 60%;
-    max-width: 400px;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  }
-  
-  .tribute-text {
-    margin-bottom: 30px;
-  }
-  
-  .tribute-text p {
-    line-height: 1.6;
-    font-size: 1.1em;
-    margin-bottom: 10px;
-  }
-  
-  .tribute-info {
-    margin-bottom: 30px;
-  }
-  
-  .tribute-info ul {
-    list-style-type: none;
-  }
-  
-  .tribute-info li {
-    font-size: 1.1em;
-    margin-bottom: 8px;
-  }
-  
-  footer {
-    text-align: center;
-    margin-top: 30px;
-    font-size: 0.9em;
-    color: #777;
+    border: 2px solid #ddd;
+    border-radius: 5px;
   }
   
   
-  @media (max-width: 768px) {
-    .tribute-image img {
-      width: 80%;
-    }
-  
-    h1 {
-      font-size: 2em;
-    }
+  .buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
   }
   
+  
+  .button {
+    padding: 20px;
+    font-size: 20px;
+    background-color: #f0f0f0;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  .button:active {
+    background-color: #ddd;
+  }
+  
+  .operator {
+    background-color: #fe9f0f;
+    color: white;
+  }
+  
+  .operator:active {
+    background-color: #e88f00;
+  }
+  
+  .equals {
+    background-color: #4CAF50;
+    color: white;
+    grid-column: span 2;
+  }
+  
+  .equals:active {
+    background-color: #45a049;
+  }
+  
+  .button:hover {
+    background-color: #eaeaea;
+  }
   

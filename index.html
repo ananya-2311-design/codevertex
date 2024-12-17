@@ -1,50 +1,39 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Tribute Page - Albert Einstein</title>
+  <title>Simple Calculator</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div class="calculator">
+    <input type="text" id="result" class="result" disabled />
 
-
-  <div class="tribute-container">
-    <header>
-      <h1>Tribute to Albert Einstein</h1>
-    </header>
-
-    
-    <div class="tribute-image">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/d/d3/Einstein_1921_by_F_Schmutzer_-_restoration.jpg" alt="Albert Einstein" />
+    <div class="buttons">
+      <button class="button" onclick="appendValue('7')">7</button>
+      <button class="button" onclick="appendValue('8')">8</button>
+      <button class="button" onclick="appendValue('9')">9</button>
+      <button class="button operator" onclick="appendValue('/')">/</button>
+      
+      <button class="button" onclick="appendValue('4')">4</button>
+      <button class="button" onclick="appendValue('5')">5</button>
+      <button class="button" onclick="appendValue('6')">6</button>
+      <button class="button operator" onclick="appendValue('*')">*</button>
+      
+      <button class="button" onclick="appendValue('1')">1</button>
+      <button class="button" onclick="appendValue('2')">2</button>
+      <button class="button" onclick="appendValue('3')">3</button>
+      <button class="button operator" onclick="appendValue('-')">-</button>
+      
+      <button class="button" onclick="appendValue('0')">0</button>
+      <button class="button" onclick="clearResult()">C</button>
+      <button class="button equals" onclick="calculateResult()">=</button>
+      <button class="button operator" onclick="appendValue('+')">+</button>
     </div>
-
-    
-    <section class="tribute-text">
-      <h2>Who is Albert Einstein?</h2>
-      <p>Albert Einstein was a theoretical physicist who developed the theory of relativity, one of the two pillars of modern physics (alongside quantum mechanics). His work is also known for its influence on the philosophy of science. He is best known to the public for his mass–energy equivalence formula <em>E = mc²</em>, which has been dubbed "the world's most famous equation".</p>
-      <p>Einstein received the 1921 Nobel Prize in Physics "for his services to Theoretical Physics, and especially for his discovery of the law of the photoelectric effect", a pivotal step in the development of quantum theory.</p>
-    </section>
-
-    
-    <section class="tribute-info">
-      <h3>Key Facts</h3>
-      <ul>
-        <li>Born: March 14, 1879, in Ulm, Germany</li>
-        <li>Died: April 18, 1955, in Princeton, New Jersey, USA</li>
-        <li>Notable Works: Theory of Relativity, Photoelectric Effect</li>
-        <li>Famous Quote: "Imagination is more important than knowledge." - Albert Einstein</li>
-      </ul>
-    </section>
-
-    
-    <footer>
-      <p>Page created by [Your Name]</p>
-    </footer>
   </div>
 
+  <script src="script.js"></script>
 </body>
 </html>
-
